@@ -1,0 +1,18 @@
+body{
+    background: url("../images/background-img.jpg");
+}
+.container{
+    margin-top: 120px;
+   background-color: grey;
+   border-style: solid;
+   border-width: 2px;
+   border-color: black;
+   min-height: 300px;
+   opacity: 0.75;
+
+}
+
+#header{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
