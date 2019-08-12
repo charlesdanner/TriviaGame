@@ -1,15 +1,14 @@
 body{
     background: url("../images/background-img.jpg");
+    color: white;
 }
 .container{
-    margin-top: 120px;
-   background-color: grey;
-   border-style: solid;
-   border-width: 2px;
-   border-color: black;
+    margin-top: 60px;
+   background-color: black;
    min-height: 300px;
-   opacity: 0.75;
+   opacity: 0.5;
    padding: 20px;
+   color: white;
 
 }
 
