@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Trivia</title>
 </head>
 
 <body>
         <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 id="header">Totally Trivial Trivia</h1>
+                    <h1 id="header">Totally Trivial Astronomy Trivia</h1>
                     
                 </div>
             </div>
@@ -27,17 +28,17 @@
             </div>
         </div>
         <div id="quiz">
-        <h3 class="timer">Time remaining: 60 seconds</h3>
+        <h3 class="timer" id="timeLeft"></h3>
         
             <div class="row">
                 <div class="col-md-12">
                     <h2>Question 1</h2>
-                    <p>The question goes here</p>
+                    <p>How many planets are in the solar system?</p>
 
                     <form id="q1">
-                        <input type="radio" name="question1" value="1"> Male<br>
-                        <input type="radio" name="question1" value="2"> Female<br>
-                        <input type="radio" name="question1" value="3"> Other<br><br>
+                        <input type="radio" name="question0" value="a"> Nine<br>
+                        <input type="radio" name="question0" value="b"> Eight<br>
+                        <input type="radio" name="question0" value="c"> Four<br><br>
 
                     </form>
                 </div>
@@ -47,12 +48,12 @@
             <div class="row question">
                 <div class="col-md-12">
                     <h2>Question 2</h2>
-                    <p>The question goes here</p>
+                    <p>What does the term AU stand for in astronomy?</p>
 
                     <form id="q2">
-                        <input type="radio" name="question2" value="1"> Male<br>
-                        <input type="radio" name="question2" value="2"> Female<br>
-                        <input type="radio" name="question2" value="3"> Other<br><br>
+                        <input type="radio" name="question1" value="a"> Across the Universe<br>
+                        <input type="radio" name="question1" value="b"> Astronomical Unit<br>
+                        <input type="radio" name="question1" value="c"> Apparent Unit<br><br>
 
                     </form>
                 </div>
@@ -62,12 +63,12 @@
             <div class="row question">
                 <div class="col-md-12">
                     <h2>Question 3</h2>
-                    <p>The question goes here</p>
+                    <p>What is in the center of every galaxy?</p>
 
                     <form id="q3">
-                        <input type="radio" name="question3" value="1"> Male<br>
-                        <input type="radio" name="question3" value="2"> Female<br>
-                        <input type="radio" name="question3" value="3"> Other<br><br>
+                        <input type="radio" name="question2" value="a"> A binar Black Hole<br>
+                        <input type="radio" name="question2" value="b"> A Quasar<br>
+                        <input type="radio" name="question2" value="c"> A Supermassive Black Hole<br><br>
 
                     </form>
                 </div>
@@ -77,12 +78,12 @@
             <div class="row question">
                 <div class="col-md-12">
                     <h2>Question 4</h2>
-                    <p>The question goes here</p>
+                    <p>All the planets in the solar system spin the same direction, except for one. Which planet spins the opposite direction?</p>
 
                     <form id="q4">
-                        <input type="radio" name="question4" value="1"> Male<br>
-                        <input type="radio" name="question4" value="2"> Female<br>
-                        <input type="radio" name="question4" value="3"> Other<br><br>
+                        <input type="radio" name="question3" value="a"> Venus<br>
+                        <input type="radio" name="question3" value="b"> Jupiter<br>
+                        <input type="radio" name="question3" value="c"> Neptune<br><br>
 
                     </form>
                 </div>
@@ -92,12 +93,12 @@
             <div class="row question">
                 <div class="col-md-12">
                     <h2>Question 5</h2>
-                    <p>The question goes here</p>
+                    <p>Roughly how long will Saturn keep its rings?</p>
 
                     <form id="q5">
-                        <input type="radio" name="question5" value="1"> Male<br>
-                        <input type="radio" name="question5" value="2"> Female<br>
-                        <input type="radio" name="question5" value="3"> Other<br><br>
+                        <input type="radio" name="question4" value="a"> They will never go away<br>
+                        <input type="radio" name="question4" value="b"> 300 million years<br>
+                        <input type="radio" name="question4" value="c"> Until the heat death of the universe<br><br>
 
                     </form>
 
@@ -108,21 +109,26 @@
             <div class="row question">
                 <div class="col-md-12">
                     <h2>Question 6</h2>
-                    <p>The question goes here</p>
+                    <p>What star is closest to our solar system?</p>
 
                     <form id="q6">
-                        <input type="radio" name="question6" value="1"> Male<br>
-                        <input type="radio" name="question6" value="2"> Female<br>
-                        <input type="radio" name="question6" value="3"> Other<br><br>
+                        <input type="radio" name="question5" value="a"> The North Star<br>
+                        <input type="radio" name="question5" value="b"> Andromeda<br>
+                        <input type="radio" name="question5" value="c"> Alpha Centauri<br><br>
 
                     </form>
                 </div>
 
             </div>
-            <input type="submit">
+            <input id="submit" type="submit">
         
     </div>
-        <div id="grade"></div>
+        <div id="grade">
+            <h2 id="results"></h2>
+            <h4 id="correct"></h4>
+            <h4 id="incorrect"></h4>
+            <h4 id="unanswered"></h4>
+        </div>
 
     </div>
 
