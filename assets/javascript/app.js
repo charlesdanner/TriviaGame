@@ -8,13 +8,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var quiz = document.getElementById("quiz");
     var submit = document.getElementById("submit")
     var results = document.getElementById("grade")
-    var answers = ["b", "c", "c", "a", "b", "c"]
+    var answers = ["b", "b", "c", "a", "b", "c"]
     var timeLeft = 60;
-
-    var intervalId;
-
-
-    //add a timer 
 
     function timeLeftFunction() {
         timeLeft--;
@@ -26,14 +21,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         startQuiz.style.display = "none";
         quiz.style.display = "block";
         console.log("beef")
-            setInterval(timeLeftFunction, 1000);
-            console.log("chicken")
-
-
-
-
-        //make the timer start
-
+        setInterval(timeLeftFunction, 1000);
+        console.log("chicken")
 
     })
 
@@ -51,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 return 0;
             }
         }
-
         for (var i = 0; i < answers.length; i++) {
             if (getCheckedValue("question" + i) === answers[i]) {
                 correct++
@@ -62,12 +50,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
             else {
                 incorrect++
             }
-
         }
     }
 
 
 
+   setTimeout(function () {
+    quiz.style.display = "none";
+    grading();
+    results.style.display = "block";
+    $("#results").append("Results:")
+    $("#correct").append("You answered " + correct + " correctly");
+    $("#incorrect").append("You answered " + incorrect + " incorrectly");
+    $("#unanswered").append("Questions left unanswered: " + unanswered);
+    }, 61 * 1000)
 
 
     $("#submit").on("click", function () {
@@ -77,29 +73,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         $("#results").append("Results:")
         $("#correct").append("You answered " + correct + " correctly");
         $("#incorrect").append("You answered " + incorrect + " incorrectly");
-        $("#unanswered").append("You did not answer " + unanswered + " questions.");
+        $("#unanswered").append("Questions left unanswered: " + unanswered + ".");
 
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
