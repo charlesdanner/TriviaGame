@@ -27,78 +27,100 @@
                 <button type="button" class="btn btn-primary btn-lg" id="start">Start the Quiz</button>
             </div>
         </div>
+
+        <div class="instructions">
+                <p>Welcome to the totally trivial astronomy trivia game! Your objective is to answer as many questions as possible before the time runs out. Beware though, if you hit submit without answering a question it will mark that question as unanswered, so be sure to make sure you don't misclick when trying to select an answer! Good luck, have fun, and try to learn something!</p>
+            </div>
         <div id="quiz">
-        <h3 class="timer" id="timeLeft"></h3>
+        <h3 class="timer" id="timeLeft">Time remaining:60</h3>
+
         
-            <div class="row">
+        
+            <div class="row question dottedline">
                 <div class="col-md-12">
                     <h2>Question 1</h2>
                     <p>How many planets are in the solar system?</p>
 
                     <form id="q1">
-                        <input type="radio" name="question0" value="a"> Nine<br>
-                        <input type="radio" name="question0" value="b"> Eight<br>
-                        <input type="radio" name="question0" value="c"> Four<br><br>
+                        <div class="answer"><input type="radio" name="question0" value="a"> Nine</div>
+                        <div class="answer"><input type="radio" name="question0" value="b"> Eight</div>
+                        <div class="answer"><input type="radio" name="question0" value="c"> Four</div>
+                        
+                        
+                        
 
                     </form>
                 </div>
 
             </div>
 
-            <div class="row question">
+            <div class="row question dottedline">
                 <div class="col-md-12">
                     <h2>Question 2</h2>
                     <p>What does the term AU stand for in astronomy?</p>
 
                     <form id="q2">
-                        <input type="radio" name="question1" value="a"> Across the Universe<br>
-                        <input type="radio" name="question1" value="b"> Astronomical Unit<br>
-                        <input type="radio" name="question1" value="c"> Apparent Unit<br><br>
+                            <div class="answer"><input type="radio" name="question1" value="a"> Across the Universe</div>
+                            <div class="answer"><input type="radio" name="question1" value="b"> Astronomical Unit</div>
+                            <div class="answer"><input type="radio" name="question1" value="c"> Apparent Unit</div>
+                        
+                        
+                        
 
                     </form>
                 </div>
 
             </div>
 
-            <div class="row question">
+            <div class="row question dottedline">
                 <div class="col-md-12">
                     <h2>Question 3</h2>
                     <p>What is in the center of every galaxy?</p>
 
                     <form id="q3">
-                        <input type="radio" name="question2" value="a"> A binar Black Hole<br>
-                        <input type="radio" name="question2" value="b"> A Quasar<br>
-                        <input type="radio" name="question2" value="c"> A Supermassive Black Hole<br><br>
+                            <div class="answer"><input type="radio" name="question2" value="a"> A binar Black Hole</div>
+                            <div class="answer"><input type="radio" name="question2" value="b"> A Quasar</div>
+                            <div class="answer"><input type="radio" name="question2" value="c"> A Supermassive Black Hole</div>
+                        
+                        
+                        
 
                     </form>
                 </div>
 
             </div>
 
-            <div class="row question">
+            <div class="row question dottedline">
                 <div class="col-md-12">
                     <h2>Question 4</h2>
                     <p>All the planets in the solar system spin the same direction, except for one. Which planet spins the opposite direction?</p>
 
                     <form id="q4">
-                        <input type="radio" name="question3" value="a"> Venus<br>
-                        <input type="radio" name="question3" value="b"> Jupiter<br>
-                        <input type="radio" name="question3" value="c"> Neptune<br><br>
+                        <div class="answer"><input type="radio" name="question3" value="a"> Venus</div>
+                        <div class="answer"><input type="radio" name="question3" value="b"> Jupiter</div>
+                        <div class="answer"><input type="radio" name="question3" value="c"> Neptune</div>
+
+                        
+                        
+                        
 
                     </form>
                 </div>
 
             </div>
 
-            <div class="row question">
+            <div class="row question dottedline">
                 <div class="col-md-12">
                     <h2>Question 5</h2>
                     <p>Roughly how long will Saturn keep its rings?</p>
 
                     <form id="q5">
-                        <input type="radio" name="question4" value="a"> They will never go away<br>
-                        <input type="radio" name="question4" value="b"> 300 million years<br>
-                        <input type="radio" name="question4" value="c"> Until the heat death of the universe<br><br>
+                            <div class="answer"><input type="radio" name="question4" value="a"> They will never go away</div>
+                            <div class="answer"><input type="radio" name="question4" value="b"> 300 million years</div>
+                            <div class="answer"><input type="radio" name="question4" value="c"> Until the heat death of the universe</div>
+                        
+                        
+                        
 
                     </form>
 
@@ -112,10 +134,13 @@
                     <p>What star is closest to our solar system?</p>
 
                     <form id="q6">
-                        <input type="radio" name="question5" value="a"> The North Star<br>
-                        <input type="radio" name="question5" value="b"> Andromeda<br>
-                        <input type="radio" name="question5" value="c"> Alpha Centauri<br><br>
-
+                            <div class="answer"><input type="radio" name="question5" value="a"> The North Star</div>
+                            <div class="answer"><input type="radio" name="question5" value="b"> Andromeda</div>
+                            <div class="answer"><input type="radio" name="question5" value="c"> Alpha Centauri</div>
+                            
+                        
+                        
+                        
                     </form>
                 </div>
 

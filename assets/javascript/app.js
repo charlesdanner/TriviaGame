@@ -14,17 +14,18 @@ document.addEventListener("DOMContentLoaded", function (event) { //wrap everythi
         $("#timeLeft").html("Time remaining: " + timeLeft);
     }
 
-    function endResults(){
+    function endResults() {
         quiz.style.display = "none";        //function to run if submit button is hit or if time runs out
         grading();
         results.style.display = "block";
-        $("#results").append("Results:")
-        $("#correct").append("You answered " + correct + " correctly");
-        $("#incorrect").append("You answered " + incorrect + " incorrectly");
-        $("#unanswered").append("Questions left unanswered: " + unanswered + ".");
+        $("#results").html("Results:")
+        $("#correct").html("You answered " + correct + " correctly");
+        $("#incorrect").html("You answered " + incorrect + " incorrectly");
+        $("#unanswered").html("Questions left unanswered: " + unanswered);
     }
 
     $("#start").on("click", function () {
+        $(".instructions").hide()
         startQuiz.style.display = "none";       //when the quiz is started the button to start the quiz is hidden and the quiz is shown with the .style.display = "block"
         quiz.style.display = "block";
         setInterval(timeLeftFunction, 1000);    //interval set to the timeLeft function which counts down every second per the 1000
@@ -53,14 +54,17 @@ document.addEventListener("DOMContentLoaded", function (event) { //wrap everythi
             }
             else {
                 incorrect++
-            }}}
+            }
+        }
+    }
 
-   setTimeout(function () {
-    endResults()                //setTimeOut is how the quiz ends itself. it is set to 61 instead of 60 because I found that this part is being read about a second after the interval is read at the beginning so they sync up well
+    var timerOut = setTimeout(function () {
+        endResults()                //setTimeOut is how the quiz ends itself. it is set to 61 instead of 60 because I found that this part is being read about a second after the interval is read at the beginning so they sync up well
     }, 61 * 1000)
 
     $("#submit").on("click", function () {
         endResults()
+        clearTimeout(timerOut)
 
     })
 });

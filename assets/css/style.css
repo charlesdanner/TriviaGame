@@ -1,6 +1,7 @@
 body{
     background: url("../images/background-img.jpg");
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     margin-top: 60px;
@@ -9,12 +10,25 @@ body{
    opacity: 0.5;
    padding: 20px;
    color: white;
+ 
 
+}
+
+h2{
+    font-weight: bold
+}
+
+.answer{
+    margin: 20px;
+    display: inline-block;
+    font-size: 20px;
 }
 
 .question{
     margin-top: 20px;
-    border-bottom: dotted, 2px, black;
+    text-align: center;
+    margin: 30px;
+
 }
 
 #start-game{
@@ -28,4 +42,18 @@ body{
 
 #quiz{
     display: none;
+}
+
+p{
+  font-size: 25px;  
+}
+
+.dottedline{
+    border-bottom: 1px dotted white;
+    padding: 20px;
+
+}
+
+.instructions{
+    margin: 20px;
 }
