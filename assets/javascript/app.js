@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) { //wrap everythi
     var results = document.getElementById("grade")
     var answers = ["b", "b", "c", "a", "b", "c"]
     var timeLeft = 60;
+    var timerOut   //placeholder variable for the timeOut
 
     function timeLeftFunction() {
         timeLeft--;                 //used to keep track of time and populate the DOM
@@ -28,7 +29,10 @@ document.addEventListener("DOMContentLoaded", function (event) { //wrap everythi
         $(".instructions").hide()
         startQuiz.style.display = "none";       //when the quiz is started the button to start the quiz is hidden and the quiz is shown with the .style.display = "block"
         quiz.style.display = "block";
-        setInterval(timeLeftFunction, 1000);    //interval set to the timeLeft function which counts down every second per the 1000
+        setInterval(timeLeftFunction, 1000);
+        timerOut = setTimeout(function () {
+            endResults()                //setTimeOut is how the quiz ends itself. it is set to 61 instead of 60 because I found that this part is being read about a second after the interval is read at the beginning so they sync up well
+        }, 60 * 1000)                   //interval set to the timeLeft function which counts down every second per the 1000
 
     })
 
@@ -58,9 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) { //wrap everythi
         }
     }
 
-    var timerOut = setTimeout(function () {
-        endResults()                //setTimeOut is how the quiz ends itself. it is set to 61 instead of 60 because I found that this part is being read about a second after the interval is read at the beginning so they sync up well
-    }, 61 * 1000)
+   
 
     $("#submit").on("click", function () {
         endResults()

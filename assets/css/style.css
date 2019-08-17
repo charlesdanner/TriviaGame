@@ -57,3 +57,7 @@ p{
 .instructions{
     margin: 20px;
 }
+
+input[type=radio]:checked + label{
+    font-weight: bold;
+}
